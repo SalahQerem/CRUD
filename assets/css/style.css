@@ -1,0 +1,3 @@
+.name-error, .category-error, .price-error, .description-error, .capacity-error, .updateBtn{
+    display: none;
+}

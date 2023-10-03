@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="vender/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vender/fontawesome/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+    <div class="add-course">
+        <div class="container">
+            <h1>CRUD System</h1>
+            <form action="">
+                <div class="mb-3">
+                    <label for="">course name <span class="text-danger">*</span> </label>
+                    <input class="inputs form-control" type="text" placeholder="cource name" id="courseName">
+                    <p class="name-error text text-danger mt-3">The Name must start with capital and length between 3 and 10</p>
+                </div>
+                <label for="">course category</label>
+                <input class="inputs form-control" type="text" placeholder="cource category" id="courseCategory">
+                <p class="category-error text text-danger mt-3">The Category must start with capital and length between 3 and 15</p>
+                <label for="">course price</label>
+                <input class="inputs form-control" type="number" placeholder="cource price" id="coursePrice">
+                <p class="price-error text text-danger mt-3">The Price must be between 100 and 500</p>
+                <label for="">course description</label>
+                <textarea class="inputs form-control" placeholder="course description" id="courseDescription"></textarea>
+                <p class="description-error text text-danger mt-3">The Description must have length between 10 and 50</p>
+                <label for="">course capacity</label>
+                <input class="inputs form-control" type="number" placeholder="cource capacity" id="courseCapacity">
+                <p class="capacity-error text text-danger mt-3">The Capacity must be between 20 and 150 </p>
+    
+                <input type="submit" value="Add Course" disabled class="addBtn btn btn-outline-secondary mt-3" id="click" />
+                <input type="submit" value="Update Course" class="updateBtn btn btn-outline-info mt-3" id="update" />
+                <button class="btn btn-outline-secondary mt-3" type="reset" id="resetbtn">clear</button>
+            </form>
+        </div>
+        <div class="container">
+            <input type="search" placeholder="search..." id="search" class="form-control my-3">
+
+            <table class="table table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>name</th>
+                        <th>category</th>
+                        <th>price</th>
+                        <th>description</th>
+                        <th>capacity</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">delete all</button>
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="vender/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
